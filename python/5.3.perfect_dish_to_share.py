@@ -7,7 +7,8 @@ def is_perfect_number(n):
 
 
 if __name__ == '__main__':
-    num = input("Please enter a maximum number to check:")
-    for i in range(1, int(num)):
+    i = 1
+    while True:
         if is_perfect_number(i):
             print(i)
+        i += 1
