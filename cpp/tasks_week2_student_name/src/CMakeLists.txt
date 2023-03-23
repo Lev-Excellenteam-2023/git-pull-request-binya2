@@ -1,0 +1,1 @@
+target_sources (myVector PRIVATE "main.cpp" "Vector.cpp" "Stack.cpp")
