@@ -1,15 +1,14 @@
 from PIL import Image
 
-"""
-   The function extracts the encrypted content.
-   :param user_path: Image's path.
-   :return: The message that was encrypted
-   """
 
 
-def image_decoding(path):
+
+def image_decoding(image_path):
+    """
+    This function gets a path to an image file and returns a string.
+    """
     text = ''
-    with Image.open(path).convert('RGB') as image:
+    with Image.open(image_path).convert('RGB') as image:
         for x in range(image.width):
             for y in range(image.height):
                 if image.getpixel((x, y)) == (1, 1, 1):
