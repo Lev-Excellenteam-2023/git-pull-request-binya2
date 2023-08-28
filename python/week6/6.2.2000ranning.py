@@ -1,16 +1,16 @@
 import time
-""""
+
+
+def timer(func, *args, **kwargs) -> float:
+    """"
     This function calculate the run time of the argument function.
     :param f: The function.
     :param args1: this is the parameters of the function if they are given by position
     :param args2: this is the parameters of the function if they are given by name
     :return: the execution time of the function
     """
-
-
-def timer(f, *args, **kwargs):
     start_time = time.time()
-    f(*args, **kwargs)
+    func(*args, **kwargs)
     return time.time() - start_time
 
 
