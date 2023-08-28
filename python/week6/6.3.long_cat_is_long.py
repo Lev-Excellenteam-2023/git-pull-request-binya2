@@ -1,8 +1,6 @@
 def count_words(text):
     """
-    Accepts text as a parameter, and returns a dictionary of the word lengths in it.
-    :param text: The text.
-    :return: A dictionary mapping word lengths to the number of words with that length.
+    This function gets a text and returns a string with the words and their lengths.
     """
     word_lengths = ""
     clean_text = ''.join(letter for letter in text if letter.isalpha() or letter.isspace()).split()
