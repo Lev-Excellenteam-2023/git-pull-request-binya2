@@ -1,16 +1,13 @@
 from collections import defaultdict
 
 
-def group_by(f, iterable):
+def group_by(func, iterable):
     """
-    This function groups the elements in the iterable by the result of applying the function f to each element.
-    :param f: A function that takes an element of the iterable as its argument and returns a key to group by.
-    :param iterable: An iterable of elements to group.
-    :return: A dictionary mapping keys to lists of elements that have the same key.
+    This function gets a function and an iterable and returns a dictionary with the function as the key and the
     """
     res_dict = defaultdict(list)
     for item in iterable:
-        res_dict[f(item)].append(item)
+        res_dict[func(item)].append(item)
     return res_dict
 
 
